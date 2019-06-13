@@ -35,45 +35,44 @@ font-style: normal;
     margin: 0;
     padding: 0;
    }
+body{
+    height: 100%;
+}
+#wrapper{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.wrap{
+	max-width: 1024px;
+	margin: 0 auto;
+	padding:0 20px;
+}
+
+.wrap:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
 .header{
 	background: url('img/bg.png') no-repeat;
 	background-size: 100%;
 	height:488px;
 	width: 100%;
-	right: 0;
-	position: relative;
+	margin-bottom: 100px;
+	
 }
 .caption{
 	font-family: 'MrsEavesOT-Italic';
 	font-size: 6em;
 	color: #b7bbbc;
-	left: 17.10%;
-	top: 18px;
+
+	
 	width: 300px;
 
-	position: relative;
 }
-.sidebar-menu{
-	display: none;
-	  background: #555 repeat left top;
-	  /*left: -285px;  прячем меню */
-	  height: 100%;
-	  position: fixed;
-	  width: 30%;
-	  left: -30%;
-}
-.sidebar-menu li{}
-
-.sidebar-menu li a{
-	font-size: 1.01em;
-	font-family: "segoeWPLight";
-	color: #fff;
-	padding: 30px;
-}
-.sidebar-menu li a:hover{
-	text-decoration: none;
-	color: #becacd;
-} 
 
 .menu{}
 
@@ -81,7 +80,6 @@ font-style: normal;
 	position: relative;
 	left: 49.06%;
 	bottom: 95px;
-	width: 48%;
 }
 
 .menu .header-menu li{
@@ -89,6 +87,25 @@ font-style: normal;
 	
 	padding-right: 52px;
 	
+}
+
+.menu .header-menu li:nth-child(4){
+	padding-right: 20px;
+}
+
+.menu .header-menu li:last-child{
+	padding-right: 0px;
+}
+
+.menu .menuToggle{
+	display: none;
+	font-size: 1.5em;
+	color: #becacd;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	float: right;
+	margin: 20px 20px 0 0;
 }
 .menu .header-menu li a{
 	font-size: 1.01em;
@@ -99,34 +116,10 @@ font-style: normal;
 	text-decoration: none;
 	color: #becacd;
 }
-.icon-menu{
-	position: relative;
-	left: 90%;
-	width: 50px;
-	bottom: 145px;
-	display: none;
-	border: 1px solid #fff;
-	padding: 7px 0 ;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-.icon-close{
-	display: none;
-	color: #fff;
-	margin:;
-	cursor: pointer;
-}
-.icon-menu i{
-	color: #fff;
-	margin-left: 15px;
-}
 
 .header-slider{
-	position: absolute;
-	top:199px;
-	left:170px;
 	max-width: 800px;
+	position: relative;
 }
 .header-slider .coffee-block{
 	background: url('img/coffee.png') no-repeat;
@@ -138,13 +131,12 @@ font-style: normal;
 .header-slider .slider-text{
 	width: 340px;
 	float: right;
-	margin-top:57px;
+	
 }
 .header-slider .prev-button{
 	float: left;
-	top: 111px;
-	right: 145px;
-	position: relative;
+	margin-top: 111px;
+	margin-right: 6.24%;
 	background: url("img/prev-button.png") no-repeat;
 	height: 50px;
 	width:50px;
@@ -152,18 +144,24 @@ font-style: normal;
 }
 .header-slider .next-button{
 	float: right;
-	bottom: 237px;
-	left: 105px;
-	position: relative;
+	margin-top: -237px;
+	margin-right: -16.875%;
 	background: url("img/next-button.png") no-repeat;
 	height: 50px;
 	width:50px;
 	border: none;
 }
+
+.slider-text{
+	padding-top:57px;
+}
+
 .slider-text h1{
 	font-size: 2.875em;
 	color:#fff;
 	font-family: SegoeUISemiBold;
+	line-height: 20px;
+
 }
 .slider-text p{
 	font-size: 2.0625em;
@@ -180,19 +178,19 @@ font-style: normal;
     font-size:1em;
     width: 138px;
     height: 38px;
-    margin-top: 37px;
+    margin-bottom: 37px;
     box-shadow: 
      0 0 0 4px rgba(0, 0, 0, .2);
 }
 .tab-content-block{
-	margin-top:100px;
+	margin-bottom: 30px;
 	
 }
 .tab-content-block .tab-menu{
 	list-style-type: none;
+	display: flex;
 	position: relative;
 	top:15px;
-	display: flex;
 	/*overflow: hidden;*/
 }
 
@@ -231,7 +229,6 @@ font-style: normal;
 	font-family:segoeWPLight;
 	font-size: 1.1875em;
 	color: #676666;
-	margin: 62px 0 0 0px;
 	text-align: center;
 	
 }
@@ -240,8 +237,8 @@ font-style: normal;
 	height: 78px;
 	background: #6598e6;
 	position: relative;
-	left:70px;
 	border-radius: 4px;
+	margin: 0 0 62px 70px;
 }
 .item-block:before,
 .item-block:after{
@@ -350,7 +347,7 @@ font-style: normal;
     2px 2px 6px -4px rgba(221, 221, 221, 1),
     -2px 2px 6px -4px rgba(221, 221, 221, 1);
 	border: 1px  solid #dedede;
-	padding-bottom: 90px;
+	padding:15px 0 70px 0;
 }
 
 .tab-content .comp{
@@ -359,17 +356,13 @@ font-style: normal;
 	width: 732px;
 	box-shadow:none;
 	border: none;
-	position: relative;
-	top:15px;
-	left: 57px;
+	margin: 0 0 40px 57px;
 }
 
 
 
 .tab-content>div h1{
-	position: relative;
-	top: 40px;
-	left: 57px;
+	margin: 0 0 40px 57px;
 	font-family:segoeWPLight;
 	font-size: 1.75em;
 	color: #4f4f4f;
@@ -377,39 +370,35 @@ font-style: normal;
 }
 
 .tab-content>div p{
-	position: relative;
-	top: 40px;
-	left: 57px;
+	margin-left: 57px;
 	color: #818181;
 	font-family: 'Univers 45 Light Oblique';
 	font-size:0.9em;
-	width: 875px;
+	width: 85.44%
 }
+
 .info-block{
-	margin-top: 30px;
 	overflow: hidden;
 	padding-bottom: 73px;
+	margin-bottom: 22px;
+	border-bottom: 1px solid #e5e5e5;
 }
 .img-block{
 	background: url("img/img-block.png") no-repeat;
 	height: 314px;
 	width: 452px;
 	float: left;
-	position: relative;
-	left: 133px;
 	box-shadow:0 0 10px 5px rgba(221, 221, 221, 1);
 	border-radius: 7px;
 }
 .block-text{
 	float: right;
-	position: relative;
-	right: 153px;
 }
 .block-text h3{
 	font-family:segoeWPLight;
 	font-size: 1.4375em;
 	color: #4f4f4f;
-	margin-left: 15px;
+	margin:0 0 23px 15px;
 }
 .block-text ul{
 	list-style-image: url("img/marker.png");
@@ -418,12 +407,10 @@ font-style: normal;
 	color: #8a8888;
 	font-family: 'Univers 45 Light Oblique';
 	font-size: 0.75em;
-	margin-top: 23px;
+	margin-bottom: 23px;
 }
 .contact-us{
 	overflow: hidden;
-	border-top: 1px solid #e5e5e5;
-	padding-top: 23px;
 	padding-bottom: 35px;
 }
 
@@ -431,6 +418,8 @@ font-style: normal;
 	background: #e67624;
 	border-radius: 7px;
 	padding-bottom: 10px;
+	float: left;
+	width: 45.80%;
 }
 
 .log-in-block input{
@@ -450,6 +439,7 @@ font-style: normal;
 	border:none;
 	padding-left: 12px;
 	margin-left: 10px;
+	width: 33.04%;
 }
 
 #pwd{
@@ -459,14 +449,14 @@ font-style: normal;
 	border:none;
 	padding-left: 12px;
 	margin-left: 10px;
+	width: 31.98%;
 }
 .btn-login{
 	background: #444444;
 	border-radius: 0px;
 	color: #fff;
 	font-family: segoeWPLight;
-	position: relative;
-	left: 75px;
+	margin-left: 20px;
 	border:none;
 	padding:5px 10px;
 }
@@ -474,8 +464,10 @@ font-style: normal;
 .subscribe-block{
 	background:#01d4f3;
 	border-radius: 7px;
-	left: 30px;
-	
+	margin-left: 30px;
+	float: right;
+	width: 45.89%;
+	padding-bottom: 10px;
 }
 
 .subscribe-block h3{
@@ -494,18 +486,18 @@ font-style: normal;
 	padding-left:12px;
 	position: relative;
 	margin-left:10px;
-
+	width: 56.17%;
 }
 .btn-subscribe{
-	background: #444444;
+	background:#029bb1;
 	border-radius: 0px;
 	color: #fff;
 	font-family: segoeWPLight;
 	position: relative;
 	border: none;
-	left:270px;
 	padding:5px 10px;
 	opacity: 1;
+	margin-left: 80px;
 
 }
 .footer{
@@ -515,7 +507,7 @@ font-style: normal;
 
 .center{
 	display: inline-block;
-	padding-right:87px;
+	padding-right:70px;
 }
 
 .contact-block{
@@ -561,18 +553,19 @@ font-style: normal;
 	font-family: Arial, sans-sarif;
 }
 .prev-btn{
-	background: url("img/prev-btn.png");
+	background: url("img/prev-btn.png") no-repeat;
+	background-size: 100%;
 	width: 16px;
 	height: 16px;
 	border:none;
 	left:167px;
 	top: 22px;
 	position: relative;
-	
 }
 
 .next-btn{
-	background: url("img/next-btn.png");
+	background: url("img/next-btn.png") no-repeat;
+	background-size: 100%;
 	width: 16px;
 	height: 16px;
 	border:none;
@@ -592,7 +585,10 @@ font-style: normal;
 	width: 144px;
 }
 
-.footer-logo{}
+.footer-logo{
+	position: relative;
+	bottom: 38px;
+}
 
 .footer-logo h1{
 	font-family: 'MrsEavesOT-Italic';
@@ -606,255 +602,273 @@ font-style: normal;
 }
 
 @media screen and (max-width: 1024px) {
-	body{
-		max-width: 1024px;
-	}
-	.header{
-		margin: 0 auto;
-		right: 0;
-		max-width: 1024px;
-	}
-	.caption{
-		left:100px;
-	}
-	
 	.header-slider{
-		top:140px;
-		left:100px;
-	}
-	.header-slider .prev-button{
-		right: 0;
-	}
-
-	.header-slider .next-button{
-		left: 0;
-	}
-	.slider-text h1{
-		bottom: 50px;
-		position: relative;
-	}
-
-	.slider-text p{
-		bottom: 50px;
-		position: relative;
-	}
-
-	.slider-text button{
-		margin-top: 0;
 		bottom: 30px;
-		position: relative;
-	}
-
-	.tab-content>div p{
-		width: 750px;
-	}
-
-
-	.img-block{
-		left: 50px;
-	}
-	.block-text{
-		right: 50px;
-	}
-	.subscribe-block{
-		left: 0;
-		margin-top: 10px;
-		padding-bottom: 10px;
-	}
-	.btn-login{
-		left: 435px;
-	}
-
-	.btn-subscribe{
-		left: 623px;
-	}
-
-	.footer-slider{
-		width: 350px;
-	}
-	.footer-logo h1 {
-		font-size: 4em;
 	}
 }
 
 @media screen and (max-width: 768px){
+
+	.caption{
+		font-size: 4em;
+	}
 	.header{
-		background-image: url('img/bg1.png');
-		background-size: 100%;
-		background-repeat: no-repeat; 
-		height:488px;
-		width: 100%;
+		margin-bottom: 50px;
+		height: 340px;
+	}
+	.menu .header-menu{
+        display: none;
+        position:relative;
+        background: #000;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+
+	}
+	.menu .header-menu li{
+		display: block;
+		padding:10px 0;
+	}
+	.menu .header-menu li a{
+		text-align: center;
+	}
+	.menu .menuToggle{
+		display: block;
 	}
 	.header-slider{
-		top:195px;
-		max-width:740px;
-		height: 350px;
-		left: 0px;
-	}
-	.caption{
-		font-size: 5em;
-		left: 30px;
-	}
-
-	.icon-menu{
-		left: 90%;
-		width: 50px;
-		top:-70px;
-		display: block;
-		position: relative;
+		position: static;
+		margin:0px 50px 0 0px;
 		
 	}
-	.header-menu{
-		display: none;
-	}
-	.header-slider .prev-button{
 
+	.header-slider .coffee-block{
+		height: 250px;
+		width: 250px;
+		background-size: 100%;
+		margin-left: 55px;
+		position: static;
 	}
-	.header-slider .next-button{
-		
-	}
-	.sidebar-menu{
-		display: block;
+	.header-slider .slider-text{
+		margin:0 50px 0px 0px;
+		width: 200px;
+		padding-top: 20px;
 	}
 	.slider-text h1{
-		margin-left: 10px;
+		font-size: 2em;
 	}
-
 	.slider-text p{
-		margin-left: 10px;
+		font-size: 1.5em;
 	}
+	
 	.slider-text button{
-		margin-left: 10px;
+		font-size: 0.8em;
 	}
-	.item-block{
-		left: 20px;
-	}
-	.item-block{
-		width: 100px;
-		height: 55px;
-		
-		left:10px;
 
+	.slider-text .prev-btn{
+		margin:0 20px 0 0;
+		
+	}
+
+	.header-slider .next-button{
+		margin: -150px 0 0 90%;
+	}
+	.tab-content-block .tab-menu li{
+		padding:30px 0 0px 0;
+	}
+	.item-block{
+		margin: 0 0 40px 20px;
+	}
+	.tab-content{
+		height: 793px;
+	}
+
+	.tab-content .comp {
+		margin: 0;
+	}
+	.img-block{
+		float: none;
+		margin-bottom: 15px;
+	}
+	.block-text{
+		float: none;
+		margin-left: 20px;
+	}
+	.log-in-block {
+		width: 100%;
+		float: none;
+		margin-bottom: 15px;
+	}
+	.subscribe-block{
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	.footer-logo{
+		bottom: 0;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.header{
+		background-size: auto;
+		height: 400px;
+	}
+	.header-slider {
+		width: 100%;
+		margin-left: 0px;
+	}
+	.header-slider .coffee-block{
+		height: 150px;
+		width: 150px;
+		background-size: 100%;
+		float: none;
+	}
+	.header-slider  .slider-text{
+		float: none;
+		margin: 0 0 0 50px;
+	}
+
+	.header-slider .next-button{
+		margin:-210px 0 0px 0;
+	}
+
+	.item-block{
+		width: 70px;
+		height: 45px;
+		background: #6598e6;
+		position: relative;
+		border-radius: 0px;
 	}
 	.item-block:before,
 	.item-block:after{
-	    border-left: 50px solid transparent;
-	    border-right: 50px solid transparent;
+		content: "";
+	    width: 0;
+	    height: 0;
+	    position: absolute;
+	    left: 0;
+	    border-left: 35px solid transparent;
+	    border-right: 35px solid transparent;
 	}
 	.item-block:before{
-		top:-25px;
-		border-bottom: 25px solid  #6598e6;
-		border-radius: 4px;
+		top:-20px;
+		border-bottom: 20px solid  #6598e6;
 	}
 	.item-block:after {
-	    bottom: -25px;
-	    border-top: 25px solid  #6598e6;
-	    border-radius: 4px;
+	    bottom: -20px;
+	    border-top: 20px solid  #6598e6;
 	}
 	/*2*/
 	.item-block-2{
 		background: #fdcf0a;
 	}
 	.item-block-2:before{
-		top:-25px;
-		border-bottom: 25px solid  #fdcf0a;
+		top:-20px;
+		border-bottom: 20px solid  #fdcf0a;
 	}
 	.item-block-2:after {
-	    bottom: -25px;
-	    border-top: 25px solid  #fdcf0a;
+	    bottom: -20px;
+	    border-top: 20px solid  #fdcf0a;
 	}
 	/*3*/
 	.item-block-3{
 		background: #12b367;
 	}
 	.item-block-3:before{
-		top:-25px;
-		border-bottom: 25px solid  #12b367;
+		top:-20px;
+		border-bottom: 20px solid  #12b367;
 	}
 	.item-block-3:after {
-	    bottom: -25px;
-	    border-top: 25px solid  #12b367;
+	    bottom: -20px;
+	    border-top: 20px solid  #12b367;
 	}
 	/*4*/
 	.item-block-4{
 		background: #e67624;
 	}
 	.item-block-4:before{
-		top:-25px;
-		border-bottom: 25px solid  #e67624;
+		top:-20px;
+		border-bottom: 20px solid  #e67624;
 	}
 	.item-block-4:after {
-	    bottom: -25px;
-	    border-top: 25px solid  #e67624;
+	    bottom: -20px;
+	    border-top: 20px solid  #e67624;
+	}
+
+	.item-icon{
+		
 	}
 
 	.item-icon-1{
-		background: url("img/mobile.png") no-repeat;
 		background-size: 100%;
 		height: 30px;
-		width: 30px;
-
-		margin: 20px 0 0 40px;
+		width: 20px;
+		margin: 20px 0 0px 20px;
 	}
 	.item-icon-2{
-		background: url("img/cart.png") no-repeat;
 		background-size: 100%;
-		height: 71px;
-		width: 64px;
-		margin: 20px 0 0 35px;
-	}
-	.item-icon-3{
-		background: url("img/world.png") no-repeat;
-		background-size: 100%;
-		height: 75px;
-		width: 75px;
-		margin: 20px 0 0 30px;
-	}
-	.item-icon-4{
-		background: url("img/search.png") no-repeat;
-		background-size: 100%;
-		height: 74px;
-		width: 72px;
-		margin: 20px 0 0 30px;
+		height: 35px;
+		width: 25px;
+		
 	}
 
-	.tab-content .comp{
-		left: -15px;
-		width: 500px;
-		height: 250px;
-		background-size:100%; 
+	.item-icon-3{
+		background-size: 100%;
+		height: 35px;
+		width: 35px;
+		
+	}
+	
+	.item-icon-4{
+		background-size: 100%;
+		height: 35px;
+		width: 25px;
+		
 	}
 
 	.tab-content{
-		width: 80%;
+		overflow: initial;
 	}
+
+	.tab-content .comp {
+		width: 400px;
+		height: 200px;
+		background-size: contain;
+	}
+
 	.tab-content>div h1{
-		left: 35px;
+		font-size: 1.5em;
+		margin: 0 0 0 50px;
 	}
 	.tab-content>div p{
-		left: 35px;
-		width: 420px;
+		font-size: 0.75em;
 	}
+	
+}
+
+@media screen and (max-width: 320px){
+	.header-slider{
+		max-width: 300px;
+	}
+
+	.tab-content-block{
+		margin-bottom: 30px;
+	}
+
 	.img-block{
-		float: none;
-		top: 20px;
-		left: 120px;
+		width: auto;
+		background-size: cover;
 	}
-	.block-text{
-		float: none;
-		top: 25px;
-		left: 140px;
-	}
+
 	.btn-login {
-		left: 50px;
+		margin: 10px 0px 0 70px;
 	}
-	.btn-subscribe{
-		left: 243px;
+	.btn-subscribe {
+		margin-left: 10px;
 	}
-	.center {
-		padding-right: 130px;
+	.first-text{
+		width: 280px;
 	}
-	.footer-logo h1{
-		font-size: 5em;
+	.next-btn{
+		bottom:157px;
 	}
 }

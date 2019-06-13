@@ -1,11 +1,12 @@
-var main = function(){
-	$('.icon-menu').click(function(){
-		$('.sidebar-menu').animate({
-			left:'0px';
-		}, 200);
-};
-$(document).ready(main); 
+$(document).ready(function(){
 
-	
+    $('.menuToggle').on('click', function() {
+       $('.header-menu').slideToggle(300, function(){
+            if( $(this).css('display') === "none"){
+                $(this).removeAttr('style');
+            }
+       });
 
-	
+    });
+
+});
